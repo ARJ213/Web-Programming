@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>JavaScript</title>
+    </head>
+    <body style="background-color: cornflowerblue;">
+        <h2>JavaScript Math Object</h2>
+        <div id="pi"></div>
+        <div id="sqrt"></div>
+        <div id="sqrt12"></div>
+        <div id="ln2"></div>
+        <div id="ln10"></div>
+        <div id="log2e"></div>
+        <div id="log10e"></div>
+        <br><br>
+        <h2>JavaScript String Function</h2>
+        <div id="og"></div>
+        <div id="len"></div>
+        <div id="loc"></div>
+        <div id="lloc"></div>
+    </body>
+    <script>
+        document.getElementById("pi").innerHTML="Math.PI:"+ Math.PI
+        document.getElementById("sqrt").innerHTML="Math.SQRT2:"+ Math.SQRT2
+        document.getElementById("sqrt12").innerHTML="Math.SQRT1_2:"+ Math.SQRT1_2
+        document.getElementById("ln2").innerHTML="Math.LN2:"+ Math.LN2
+        document.getElementById("ln10").innerHTML="Math.LN10:"+ Math.LN10
+        document.getElementById("log2e").innerHTML="Math.LOG2E:"+ Math.LOG2E
+        document.getElementById("log10e").innerHTML="Math.LOG10E:"+ Math.LOG10E
+
+        var str="My name is anand"
+        document.getElementById("og").innerHTML="Original String:"+str
+        document.getElementById("len").innerHTML="Length:"+str.length
+        document.getElementById("loc").innerHTML="Location of 'anand':"+str.indexOf('anand')
+        document.getElementById("lloc").innerHTML="Last Location:"+str.lastIndexOf()
+    </script>
+</html>

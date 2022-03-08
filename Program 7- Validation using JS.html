@@ -1,0 +1,119 @@
+<html>
+    <head>
+        <title>Validation</title>
+    </head>
+    <body>
+        <div id="main">
+            <div id="tb">
+                <h2>Account creation</h2>
+            </div>
+        </div>
+        <div id="login">
+            <table >
+                <tr>
+                    <td>Enter Name:</td>
+                    <td><input type="text" placeholder="Enter your name" id="t1" class="tb"/></td>
+                </tr>
+                <tr>
+                    <td>Enter Mail ID:</td>  
+                    <td><input type="text" placeholder="Enter your mail:" id="t2" class="tb"/></td>           
+                </tr>
+                <tr>
+                    <td>Enter Username:</td>
+                    <td><input type="text" placeholder="Enter a username" id="t3" class="tb"/></td>
+                </tr>
+                <tr>
+                    <td>Enter Password:</td>
+                    <td><input type="number" placeholder="Enter a Password" id="t4" class="tb"/></td>
+                </tr>
+                <tr>
+                    <td>Enter Confirm Password:</td>
+                    <td><input type="number" placeholder="Enter Confirm Password" id="t5" class="tb"/></td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="reset" value="Clear Form" onclick="clearfunc()" id="res" class="btn"/>
+                        <input type="submit" value="Create Account" onclick="registration()" class="btn"/>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        
+    </body>
+    <script>
+       function registration()
+       {
+           var name=document.getElementById("t1").value;
+           var mail=document.getElementById("t2").value;
+           var username=document.getElementById("t3").value;
+           var pass=document.getElementById("t4").value;
+           var cpass=document.getElementById("t5").value;
+
+           var pass_exp=/^(?=.*?[a-z])(?=.*?[A-Z])(?=.*?[0-9])(?=.*?[!@#$%^&*_-?])/;
+           var letter=/^[A-Za-z]+$/;
+           var filter=/^([A-Za-z0-9_\.\-])+\@([A-Za-z0-9\-]+\.)([A-Za-z0-9]{2,4})+$/;              
+                          
+           if(name=="")
+           {
+               alert("Please enter your name")
+           }              
+           else if(!letter.test(name))
+           {
+               alert("Name field required only alphabet character")
+
+           } 
+           else if(mail=="")
+           {
+            alert("Please enter your mail id")
+           }
+           else if(!filter.test(mail))   
+           {
+              alert("Invalid email")   
+           }  
+           else if(username=="")      
+           {
+            alert("Please enter your user name")
+           } 
+           else if(!letter.test(username))     
+           {
+            alert("Username field required only alphabet character")
+           }  
+           else if(pass=="") 
+           {
+            alert("Please enter your password")
+           } 
+           else if(!pass_exp.test(pass))  
+           {
+            alert("Uppercase,lowercase,special character,numeric letter are required")
+           }   
+           else if(cpass=="")
+           {
+            alert("Please enter your mail id")
+           }
+           else if(pass!=cpass)
+           {
+               alert("Password not match")
+           }
+           else if(pass.length<6)
+           {
+               alert("Password minimum length is 6")
+           }
+           else if(pass.length>12)
+           {
+            alert("Password minimum length is 6") 
+           }
+           else
+           {
+               alert("Thankyou for login & Redirecting")="www.w3school.com"
+           }
+    }
+    function clearfunc()
+    {
+        document.getElementById("t1").value="";
+        document.getElementById("t2").value="";
+        document.getElementById("t3").value="";
+        document.getElementById("t4").value="";
+        document.getElementById("t5").value="";
+    }
+    </script>
+</html>
