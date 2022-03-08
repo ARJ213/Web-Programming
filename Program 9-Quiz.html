@@ -1,0 +1,77 @@
+<html>
+
+<head>
+    <title>Quiz Application</title>
+</head>
+
+<body>
+    <h1>Quiz Application Based on Javascript</h1>
+    <div>
+        <p>What is the capital of Kerala</p>
+        <input type="radio" id="mc1" name="question1" value="Trivandrum">Trivandrum
+        <input type="radio" id="mc2" name="question1" value="Kollam">Kollam
+        <input type="radio" id="mc3" name="question1" value="Kottayam">Kottayam
+        <br>
+        <p>Which state in India is known as God's Own Country</p>
+        <input type="radio" id="ma1" name="question2" value="Delhi">Delhi
+        <input type="radio" id="ma2" name="question2" value="Himachal">Himachal
+        <input type="radio" id="ma3" name="question2" value="Kerala">Kerala
+        <br>
+        <button onclick="check()">Check</button>
+    </div>
+</body>
+<script>
+
+    function check() {
+        var q1;
+        var q2;
+
+        if(document.getElementById("mc1").checked) {
+            q1 = document.getElementById("mc1").value;
+        }
+
+        if (document.getElementById("mc2").checked) {
+            q1 = document.getElementById("mc2").value;
+        }
+
+        if (document.getElementById("mc3").checked) {
+            q1 = document.getElementById("mc3").value;
+        }
+
+        if (document.getElementById("ma1").checked) {
+            q2 = document.getElementById("ma1").value;
+        }
+
+        if (document.getElementById("ma2").checked) {
+            q2 = document.getElementById("ma2").value;
+        }
+
+        if (document.getElementById("ma3").checked) {
+            q2 = document.getElementById("ma3").value;
+        }
+
+        console.log(q1)
+        console.log(q2)
+        var score = 0
+
+        if (q1 == "Trivandrum") {
+            score += 1
+        }
+        if (q2 == "Kerala") {
+            score += 1
+        }
+        if (score == 0) {
+            alert("Your score is 0")
+        }
+        else if (score == 1) {
+            alert("Your score is 1")
+        }
+        else if (score == 2) {
+            alert("Your score is 2")
+        }
+    }
+
+
+</script>
+
+</html>
